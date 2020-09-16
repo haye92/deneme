@@ -16,6 +16,12 @@ public class abc extends DB{
     public int x;
     public String a,b;
     
+    public abc() {}
+    public abc(int x, String a, String b) {
+        this.x = x;
+        this.a = a;
+        this.b = b;
+    }
     public ArrayList<abc> listele() throws Exception{
         ResultSet rs=stmt.executeQuery("select * from abc");  
         ArrayList<abc> elemanlar = new ArrayList<abc>();
@@ -28,7 +34,6 @@ public class abc extends DB{
         }
         kapat();
         return elemanlar;
-
     }
     
 }
